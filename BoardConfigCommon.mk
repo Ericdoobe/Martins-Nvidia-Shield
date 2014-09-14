@@ -76,3 +76,20 @@ WIFI_DRIVER_MODULE_ARG           := "iface_name=wlan0"
 WIFI_DRIVER_MODULE_NAME          := "bcmdhd"
 
 BOARD_HARDWARE_CLASS := device/nvidia/shieldtablet/cmhw/
+
+# TWRP
+ifneq ($(wildcard bootable/recovery-twrp/Android.mk),)
+RECOVERY_VARIANT := twrp
+DEVICE_RESOLUTION := 1200x1920
+BOARD_HAS_FLIPPED_SCREEN := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_NO_USB_STORAGE := true
+TW_BRIGHTNESS_PATH := /sys/class/backlight/pwm-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+endif

@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
     power.tn8.rc \
     ueventd.tn8.rc
 
+# Twrp
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
+
 # Enable repeatable keys in CWM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cwm.enable_key_repeat=true
