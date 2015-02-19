@@ -55,6 +55,7 @@ vendor/bin/raydium_selftest
 vendor/bin/rm_panel_setting.ini
 vendor/bin/rm_test
 vendor/bin/rm_ts_server
+vendor/bin/rm-ts_wrapper
 vendor/bin/tegrastats
 vendor/bin/tlk_daemon
 vendor/bin/ussrd

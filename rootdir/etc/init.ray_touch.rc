@@ -28,7 +28,7 @@ on init
     chown system system /sys/devices/virtual/misc/touch/slowscan_enable
 
 #Raydium touch setting
-service rm_ts_service    /vendor/bin/rm_ts_server
-    class main
-    user system
-    group system input
+service rm_ts_wrapper   /vendor/bin/rm_ts_wrapper
+#    class main
+#    user system
+#    group system input
